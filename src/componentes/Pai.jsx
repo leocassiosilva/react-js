@@ -1,13 +1,11 @@
 import  React from 'react'
-import Filho from './Filho'
+import { childrenWithprops } from '../utils/utils'
 
 export default props => 
 <div>
     <h1>{props.nome} {props.sobrenome}</h1>
     <h2>Filho</h2>
     <ul>
-        <Filho nome="Pedro" sobrenome={props.sobrenome}/>
-        <Filho {...props}/>
-        <Filho {...props} nome="Carla" />
+       {childrenWithprops(props)} 
     </ul>
 </div>
